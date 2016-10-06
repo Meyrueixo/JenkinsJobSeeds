@@ -6,7 +6,7 @@ job('Andro build example') {
       scm 'H/5 * * * *'
   }
   steps {
-      gradle 'clean assemble test'
+      gradle 'clean build testDebugUnitTest testReleaseUnitTest'
   }
   publishers {
       archiveJunit 'build/test-results/**/*.xml'
